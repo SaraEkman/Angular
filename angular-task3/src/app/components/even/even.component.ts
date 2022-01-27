@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./even.component.scss'],
 })
 export class EvenComponent implements OnInit {
-  constructor() {}
+  constructor() { }
+
+  testName:String = "Sara"
 
   ngOnInit(): void {}
 

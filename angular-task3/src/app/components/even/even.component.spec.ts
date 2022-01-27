@@ -31,4 +31,7 @@ describe('EvenComponent', () => {
     let result = component.even(3)
     expect(result).toBeFalse();
   })
+  it('should testName', () => {
+    expect(component.testName).toBe("Sara")
+  })
 });
