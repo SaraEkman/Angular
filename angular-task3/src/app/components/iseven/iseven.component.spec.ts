@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EvenComponent } from './even.component';
+import { IsevenComponent } from './iseven.component';
 
-describe('EvenComponent', () => {
-  let component: EvenComponent;
-  let fixture: ComponentFixture<EvenComponent>;
+describe('IsevenComponent', () => {
+  let component: IsevenComponent;
+  let fixture: ComponentFixture<IsevenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EvenComponent ]
+      declarations: [ IsevenComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EvenComponent);
+    fixture = TestBed.createComponent(IsevenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,13 +22,12 @@ describe('EvenComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should retun true if number is even', () => {
-    let result = component.even(2)
+      it('should retun true if number is even', () => {
+    let result = component.iseven(2)
     expect(result).toBeTrue();
   })
   it('should retun false if number is odd', () => {
-    let result = component.even(3)
+    let result = component.iseven(3)
     expect(result).toBeFalse();
   })
   it('should testName', () => {
