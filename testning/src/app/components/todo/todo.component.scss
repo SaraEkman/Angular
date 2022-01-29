@@ -1,9 +1,33 @@
 div {
+  font-size: larger;
   h1 {
     color: rgb(252, 129, 191);
+  }
+  h2 {
+    color: khaki;
+  }
+  h3 {
+    color: lawngreen;
+  }
+  p {
+    color: lightcoral;
+  }
+  img {
+    padding: 10px;
+  }
+  button {
+    margin: 30px;
   }
 }
 
 .done {
   text-decoration: line-through;
+}
+
+.todo {
+  color: paleturquoise;
+}
+
+.test {
+  display: none;
 }
