@@ -1,0 +1,10 @@
+<section>
+  <img src="https://cdn.pixabay.com/photo/2018/04/06/16/47/unicorn-3296209_1280.png" alt="Enhörning">
+  <img [src]="src" alt="Enhörning">
+  <img src="{{src}}" alt="Enhörnin">
+  <img [class.classUrl]="imgUrl" alt="Enhörnin">
+  <div  [style.font-size]="divSty ? 'xx-large' : 'small'" [class.divExt]='divSty' class="divC">Halllllo</div>
+</section>
+<div [style.background-color]="!divS ? 'grey' : 'green'">
+  <button (click)="toggle()">Klicka mig</button>
+</div>
