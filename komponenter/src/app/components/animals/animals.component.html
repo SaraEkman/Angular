@@ -1,15 +1,20 @@
 <main>
   <h1>Djuren som är matad</h1>
   <article *ngFor="let el of djur" >
-    <h2 *ngIf="el.isFed"> {{el.name}} </h2>
-    <h3 *ngIf="el.isFed"> {{el.age}} </h3>
-    <h4 *ngIf="el.isFed"> {{el.color}} </h4>
+    <div *ngIf="el.isFed">
+      <h2> {{el.name}} </h2>
+      <h3> {{el.age}} </h3>
+      <h4> {{el.color}} </h4>
+    </div>
   </article>
 
   <h1>Djuren som inte blivit matad</h1>
   <article *ngFor="let el of djur">
-    <h2 *ngIf="!el.isFed"> {{el.name}} </h2>
-    <h3 *ngIf="!el.isFed"> {{el.age}} </h3>
-    <h4 *ngIf="!el.isFed"> {{el.color}} </h4>
+    <div *ngIf="!el.isFed">
+      <h2> {{el.name}} </h2>
+      <h3> {{el.age}} </h3>
+      <h4> {{el.color}} </h4>
+    </div>
   </article>
 </main>
+

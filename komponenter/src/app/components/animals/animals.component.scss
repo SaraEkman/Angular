@@ -1,19 +1,21 @@
 main {
   article {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: larger;
-    width: 50vw;
+    div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: larger;
+      width: 20vw;
 
-    h1 {
-      color: palevioletred;
-    }
-    h2 {
-      color: plum;
-    }
-    h3 {
-      color: powderblue;
+      h1 {
+        color: palevioletred;
+      }
+      h2 {
+        color: plum;
+      }
+      h3 {
+        color: powderblue;
+      }
     }
   }
 }
