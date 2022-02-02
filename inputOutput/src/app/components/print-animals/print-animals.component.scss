@@ -1,0 +1,16 @@
+article {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  font-weight: bold;
+  display: inline-block;
+  margin: 1rem;
+
+  h1 {
+    background-color: cadetblue;
+    color: rgb(4, 4, 51);
+    border-radius: 5px;
+    padding: 10px;
+    text-shadow: 1px 1px 8px palevioletred;
+    margin-bottom: 0em;
+  }
+}
