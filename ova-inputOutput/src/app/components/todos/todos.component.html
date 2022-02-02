@@ -1,0 +1,3 @@
+<app-addtodo (saveTodo)="create($event)"></app-addtodo>
+
+<app-todo *ngFor="let t of todos" [todo]='t'></app-todo>

@@ -1,0 +1,6 @@
+<div>
+  <input type="text" #thetodo (keyup)="handlechange(thetodo.value)">
+  <button (click)="save()">Spara</button>
+
+  <p> {{newTodo}} </p>
+</div>
