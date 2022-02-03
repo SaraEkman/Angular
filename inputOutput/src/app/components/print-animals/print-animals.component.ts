@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Animal } from 'src/app/models/Animal';
 
 @Component({
@@ -8,12 +8,23 @@ import { Animal } from 'src/app/models/Animal';
 })
 export class PrintAnimalsComponent implements OnInit {
 
-  animals: Animal[] = [new Animal('Kanin', 'Dvärgvädur', 3, false, 'gräs'),
-  new Animal('Katt', 'BondeKatt', 5, true, 'fisk')]
+
+  animals: Animal[] = [new Animal('Kanin', 'Dvärgvädur', 3, 'gräs'),
+    new Animal('Katt', 'BondeKatt', 5, 'fisk')]
+
+  isFed: boolean = false
+
+  printA: string[] = []
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateIsFed(event: Animal) {
+    console.log(event);
+    this.isFed = !this.isFed
+    this.printA.push(`${event.namn} är Matad`)
   }
 
 }

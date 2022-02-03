@@ -1,5 +1,10 @@
 <article>
   <h1>Info om olika djur i zoo </h1>
+  <ul>
+    <li *ngFor="let el of printA"> {{el}} </li>
+  </ul>
+  <h2> </h2>
   <app-print-animal *ngFor="let animal of animals"
-  [animal]="animal"></app-print-animal>
+  [animal]="animal" (fed)="updateIsFed($event)">
+</app-print-animal>
 </article>

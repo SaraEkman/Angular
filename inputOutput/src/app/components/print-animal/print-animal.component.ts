@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Animal } from 'src/app/models/Animal';
 
 @Component({
@@ -7,11 +7,19 @@ import { Animal } from 'src/app/models/Animal';
   styleUrls: ['./print-animal.component.scss']
 })
 export class PrintAnimalComponent implements OnInit {
-  @Input() animal: Animal= new Animal('', '', 0, false,'')
+  @Input() animal: Animal = new Animal('', '', 0, '')
+
+
+  @Output() fed = new EventEmitter<Animal>()
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  save() {
+    this.fed.emit(this.animal)
   }
 
 }

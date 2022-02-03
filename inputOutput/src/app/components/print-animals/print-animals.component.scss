@@ -13,4 +13,24 @@ article {
     text-shadow: 1px 1px 8px palevioletred;
     margin-bottom: 0em;
   }
+  h2 {
+    background-color: cadetblue;
+    color: rgb(4, 4, 51);
+    border-radius: 5px;
+    padding: 10px;
+    text-shadow: 1px 1px 8px palevioletred;
+    margin-bottom: 0em;
+  }
+  ul {
+    li {
+      background-color: cadetblue;
+      color: rgb(4, 4, 51);
+      border-radius: 5px;
+      padding: 10px;
+      text-shadow: 1px 1px 8px palevioletred;
+      margin-bottom: 0em;
+      list-style: none;
+      margin-top: 5px;
+    }
+  }
 }
