@@ -10,6 +10,8 @@ export class TodoComponent implements OnInit {
 
   @Input() todo: Todo = new Todo('');
 
+  animationspeed: number = 2;
+
   constructor() { }
 
   ngOnInit(): void {
