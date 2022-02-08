@@ -1,0 +1,23 @@
+div {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 8px;
+
+  input {
+    margin: 10px;
+    padding: 8px;
+    border: 4px inset paleturquoise;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+  }
+  button {
+    padding: 8px;
+    border: 4px inset palevioletred;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+  }
+}

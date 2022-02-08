@@ -1,0 +1,4 @@
+<app-addtodo (saveTodo)="create($event)"></app-addtodo>
+
+<app-todo *ngFor="let t of todos; let i = index" [todo]="t"
+(theTodo)="removeLS(i)"></app-todo>
