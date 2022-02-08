@@ -5,7 +5,15 @@ div {
   font-size: x-large;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bolder;
-  text-shadow: 1px 1px 2px rgb(38, 21, 39);
+  background: linear-gradient(
+    170deg,
+    rgba(64, 4, 104, 0.76) 20%,
+    rgba(42, 102, 2, 0.787) 30%,
+    rgba(3, 61, 109, 0.959) 45%,
+    rgba(65, 1, 17, 0.911) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   p {
     padding: 10px;
