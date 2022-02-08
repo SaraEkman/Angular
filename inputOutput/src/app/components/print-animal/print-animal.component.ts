@@ -10,14 +10,19 @@ export class PrintAnimalComponent implements OnInit {
   @Input() animal: Animal = new Animal('', '', 0, '')
 
   @Output() fed = new EventEmitter<Animal>()
+  @Output() notFed = new EventEmitter<Animal>()
 
-  disa: boolean = false
+  // disa: boolean = false
   constructor() {}
 
   ngOnInit(): void {}
 
   save() {
-    this.disa = !this.disa
+    // this.disa = !this.disa
     this.fed.emit(this.animal)
+  }
+  remove() {
+    // this.disa = !this.disa;
+    this.notFed.emit(this.animal)
   }
 }

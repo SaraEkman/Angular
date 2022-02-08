@@ -3,6 +3,8 @@
     <p>Sort: {{animal.sort}} </p>
     <p>Vikt: {{animal.vikt}} </p>
     <p>Mat: {{animal.mat}} </p>
-    <p>Är matad <button (click)="save()" [disabled]="disa">Ja</button></p>
+    <p>Är matad <button (click)="save()" >Ja</button>
+      <button (click)="remove()">Nej</button>
+    </p>
 </div>
 
