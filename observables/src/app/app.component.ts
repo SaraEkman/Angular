@@ -24,16 +24,7 @@ export class AppComponent {
 
   observableTO = new Observable<number>((o) => {
     let sequen: number[] = [1, 2, 3]
-    let timeout: NodeJS.Timeout
-
-    //  function getValue(i: number) {
-    //     timeout = setTimeout(() => {
-    //         o.next(sequen[i])
-    //         if (i == sequen.length - 1) o.complete()
-    //         else getValue(++i)
-    //     }, 2000)
-    //   }
-    //   getValue(0);
+    let timeout: NodeJS.Timeout;
 
     let i = 0
     function main() {
