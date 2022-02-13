@@ -10,9 +10,12 @@ export class AppComponent {
   title = 'observables'
   source = of(1, 2, 3)
 
+  nums: number[] = [];
+
   observer = {
     next: (x: number) => {
       console.log(x)
+      this.nums.push(x)
     },
     error: (err: any) => {
       console.log(err)
