@@ -17,7 +17,7 @@ export class SlowObserverComponent implements OnInit {
 
       function getValue(i:number) {
         timeout = setTimeout(() => {
-          o.next(sequence[i]);
+          o.next(sequence[i]);  
 
           if (i === sequence.length - 1) {
             o.complete();
