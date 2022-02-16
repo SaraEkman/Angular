@@ -1,14 +1,14 @@
 export class Animal {
-  namn: string;
+  name: string;
   sort: string;
-  vikt: number;
-  mat: string;
+  weight: number;
+  food: string;
 
   constructor(n: string, s: string, v: number, m:string) {
-    this.namn = n;
+    this.name = n;
     this.sort = s;
-    this.vikt = v;
-    this.mat = m;
+    this.weight = v;
+    this.food = m;
   }
 
 }

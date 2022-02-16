@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Animal } from 'src/app/models/Animal'
+import { AnimalService } from 'src/app/services/animal.service';
 
 @Component({
   selector: 'app-print-animals',
@@ -7,12 +8,7 @@ import { Animal } from 'src/app/models/Animal'
   styleUrls: ['./print-animals.component.scss'],
 })
 export class PrintAnimalsComponent implements OnInit {
-  animals: Animal[] = [
-    new Animal('Kanin', 'Dvärgvädur', 3, 'gräs'),
-    new Animal('Katt', 'BondeKatt', 5, 'fisk'),
-    new Animal('hunden Jack', 'Australian', 2, 'hundmat'),
-    new Animal('musen Saly', 'vanlig', 1, 'ost')
-  ]
+  animals: Animal[] = [];
 
   isFed: number[] = [0]
 
@@ -20,9 +16,10 @@ export class PrintAnimalsComponent implements OnInit {
 
   printA: string[] = []
 
-  constructor() {}
+  constructor(private service: AnimalService) {}
 
   ngOnInit(): void {
+    this.animals = this.service.getAnimals()
     let res:string = localStorage.getItem('num') || '[]';
     this.sumF = JSON.parse(res);
   }
