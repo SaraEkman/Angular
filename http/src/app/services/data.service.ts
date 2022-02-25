@@ -10,7 +10,6 @@ import { IProduct } from '../models/IProduct'
 export class DataService {
   private theData = new Subject<IProduct[]>()
   theData$ = this.theData.asObservable()
-  productsArr: IProduct[] = []
 
   constructor(private http: HttpClient) {}
 
@@ -18,7 +17,7 @@ export class DataService {
     this.http.get<IProduct[]>(environment.ApiProducts).subscribe((data) => {
       console.log(data)
       this.theData.next(data)
-      localStorage.setItem('products', JSON.stringify(data));
+      localStorage.setItem('products', JSON.stringify(data))
     })
   }
 }
