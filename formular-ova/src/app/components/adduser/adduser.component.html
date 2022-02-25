@@ -1,0 +1,28 @@
+<form [formGroup]="userForm" (ngSubmit)="handleSubmit()">
+  <h1>User</h1>
+  <label for="firstname">Firstname: </label>
+  <input id="firstname" type="text" formControlName="firstName">
+  <hr>
+  <label for="lastname">Lastname: </label>
+  <input id="lastname" type="text" formControlName="lastName">
+  <hr>
+  <label for="age">Age: </label>
+  <input id="age" type="text" formControlName="age">
+  <hr>
+  <label for="email">Email: </label>
+  <input id="email" type="text" formControlName="email">
+  <hr>
+  <div formGroupName="address">
+    <h3>Address</h3>
+    <label for="street">street: </label>
+    <input id="street" type="text" formControlName="street">
+    <label for="zip"></label>
+    <input id="zip" type="text" formControlName="zip">
+    <label for="city"></label>
+    <input id="city" type="text" formControlName="city">
+  </div>
+
+  <button type="submit">Save</button>
+</form>
+
+<p>{{userForm.value | json}}</p>
