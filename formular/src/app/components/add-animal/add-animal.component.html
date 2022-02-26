@@ -1,0 +1,12 @@
+<div>
+  <label for="name">Namn: </label>
+  <input id="name" type="text" [formControl]="animalName" />
+  <label for="type">Ras: </label>
+  <input id="type" type="text" [formControl]="Type">
+  <label for="dis">beskrivning: </label>
+  <input id="dis" type="text" [formControl]="discription">
+  <button type="submit" (click)="changeName()">Ändra namn 😊</button>
+</div>
+<p> {{animalName.value}} </p>
+<p> {{Type.value}} </p>
+<p> {{discription.value}} </p>
