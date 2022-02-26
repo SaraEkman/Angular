@@ -3,6 +3,11 @@
   <label for="firstname">Firstname: </label>
   <input id="firstname" type="text" formControlName="firstName">
   <hr>
+  <div
+    *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched || userForm.get('firstName')?.dirty">
+    <div *ngIf="userForm.get('firstName')?.errors?.['required']">It's required</div>
+    <div *ngIf="userForm.get('firstName')?.errors?.['minlength']">Minimum letters length two </div>
+  </div>
   <label for="lastname">Lastname: </label>
   <input id="lastname" type="text" formControlName="lastName">
   <hr>
@@ -32,7 +37,7 @@
     <input id="city" type="text" formControlName="city">
   </div>
 
-  <button type="submit">Save</button>
+  <button type="submit" [disabled]="!userForm.valid">Save</button>
 
 </form>
 

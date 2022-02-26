@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder } from '@angular/forms';
+import { FormArray, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formbuilder',
@@ -9,7 +9,7 @@ import { FormArray, FormBuilder } from '@angular/forms';
 export class FormbuilderComponent implements OnInit {
   //Dynamiska formulär
   userForm = this.fb.group({
-    firstName: [''],
+    firstName: ['', [Validators.required,Validators.minLength(2)]],
     lastName: [''],
     email: [''],
     age: [0],
