@@ -1,0 +1,18 @@
+<form [formGroup]="userGroup" (ngSubmit)="handle()">
+  <label for="name">Namn: </label>
+  <input id="name" type="text" formControlName="Name">
+  <hr>
+  <label for="breed">Ras: </label>
+  <input id="breed" type="text" formControlName="Breed">
+  <hr>
+  <label for="description">Beskrivning: </label>
+  <input id="description" type="text" formControlName="Description">
+
+  <button type="submit">Spara</button>
+</form>
+<p>
+  {{text | json}}
+</p>
+<p>
+  {{ userGroup.value | json }}
+</p>

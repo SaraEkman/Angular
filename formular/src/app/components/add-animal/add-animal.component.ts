@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms'
 export class AddAnimalComponent implements OnInit {
   animalName = new FormControl('');
   Type = new FormControl('');
-  discription = new FormControl('');
+  description = new FormControl('');
 
   constructor() {}
 
